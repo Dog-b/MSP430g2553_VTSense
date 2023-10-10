@@ -16,6 +16,7 @@ while True:  # 循环读取串口数据并绘图
         if data:  # 如果数据不为空
             voltage = int(data) * 2.5 / 1023  # 将数据转换为整数，并计算电压值，假设参考电压为 2.5，分辨率为 10 位
             print(voltage)  # 打印电压值
+            print("V")
 
             x.append(len(x))  # 将时间数据添加到列表 x 中，假设每次采样间隔为 1 单位时间
             y.append(voltage)  # 将电压数据添加到列表 y 中
